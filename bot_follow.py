@@ -25,10 +25,10 @@ parser.add_argument("-sm", "--sleep-minute", help="Minute for the bot to go to s
 parser.add_argument("-st", "--sleep-time", help="Total time (in hours) for the bot to sleep")
 args = parser.parse_args()
 
-sleepSecondsActionMin = int(args.sleep_min or 20)
-sleepSecondsActionMax = int(args.sleep_max or 120)
-sleepSecondsLimitedMin = int(args.sleep_min_limited or 600)
-sleepSecondsLimitedMax = int(args.sleep_max_limited or 1500)
+sleepSecondsActionMin = int(args.sleep_min or 1)
+sleepSecondsActionMax = int(args.sleep_max or 2)
+sleepSecondsLimitedMin = int(args.sleep_min_limited or 30)
+sleepSecondsLimitedMax = int(args.sleep_max_limited or 120)
 
 load_dotenv()
 USER = os.getenv("GITHUB_USER")
